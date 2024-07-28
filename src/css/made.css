@@ -1,0 +1,181 @@
+@media only screen and (min-width: 768px) and (max-width: 1199px) {
+  .made-container {
+    padding-left: 77px;
+    padding-right: 77px;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .section-made {
+    padding-bottom: 100px;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .section-made {
+    padding-bottom: 128px;
+  }
+}
+
+.made-title {
+  margin-bottom: 32px;
+}
+@media only screen and (min-width: 768px) {
+  .made-title {
+    margin-bottom: 50px;
+    font-size: 24px;
+    line-height: 1.17;
+  }
+}
+
+@media only screen and (min-width: 1200px) {
+  .made-flex {
+    display: flex;
+    gap: 20px;
+    width: 100%;
+  }
+}
+
+.made-blok {
+  padding: 20px 14px;
+  background-color: var(--additional-bg-color);
+  border-radius: 15px;
+}
+
+@media only screen and (min-width: 768px) {
+  .made-blok {
+    padding: 32px 102px 32px 32px;
+  }
+}
+
+@media only screen and (min-width: 1200px) {
+  .made-blok {
+    padding: 32px;
+    width: 516px;
+  }
+}
+
+.made-subtitle {
+  margin-bottom: 20px;
+}
+
+@media only screen and (min-width: 768px) {
+  .made-subtitle {
+    width: 350px;
+    margin-bottom: 28px;
+    letter-spacing: 0;
+  }
+}
+
+.made-text {
+  letter-spacing: -0.02em;
+  position: relative;
+  padding-left: 16px;
+}
+
+.made-text > li:not(:last-child) {
+  margin-bottom: 18px;
+}
+@media only screen and (min-width: 1200px) {
+  .made-text > li:not(:last-child) {
+    margin-bottom: 24px;
+  }
+}
+.made-list-item {
+  position: relative;
+}
+
+.made-list-item::before {
+  content: '';
+  display: block;
+  position: absolute;
+
+  top: 5px;
+  left: -16px;
+
+  width: 8px;
+  height: 8px;
+
+  background: #4c4c4c;
+  border: 1px solid #eceded;
+  border-radius: 50%;
+}
+
+.plyr {
+  /*
+  Задаємо основний колір для елементів керування
+  вбудованого програвача Plyr
+  */
+  --plyr-color-main: #fd9222;
+  /*  Скруглені кути рамки для відео  */
+  border-radius: 15px;
+  width: 335px;
+  height: 500px;
+}
+
+@media only screen and (min-width: 768px) {
+  .plyr {
+    width: 614px;
+    height: 400px;
+  }
+}
+
+@media only screen and (min-width: 1200px) {
+  .plyr {
+    width: 600px;
+    height: 400px;
+  }
+}
+
+@media only screen and (min-width: 1200px) {
+  .plyr {
+    width: 600px;
+  }
+}
+@media only screen and (max-width: 1199px) {
+  .plyr {
+    margin-bottom: 20px;
+  }
+}
+
+.plyr__poster {
+  /*  Регулюємо розмір постера  */
+  background-size: cover;
+}
+
+.plyr__control--overlaid {
+  /*  Встановлюємо стилі для кнопки play  */
+  --plyr-control-spacing: 5px;
+  --plyr-video-control-background-hover: rgba(0, 0, 0, 0);
+  border: 1px solid #fff;
+}
+
+/* Приховуємо кнопу play після активації програвання відео */
+.plyr--paused.plyr__control--overlaid {
+  opacity: 0;
+}
+/* Приховуємо панель з елементами управління перед активацією програвання відео */
+.plyr--paused.plyr--stopped .plyr__controls {
+  opacity: 0;
+}
+
+.made-flex {
+  position: relative;
+}
+.made-blok-img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 1;
+  /*  якщо z index залишити так тимчасово */
+}
+
+.made-img {
+  display: none;
+
+  border-radius: 15px;
+  background-size: cover;
+}
+.plyr__control--overlaid {
+  z-index: 3;
+}

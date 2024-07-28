@@ -1,0 +1,108 @@
+.modal-mobile-menu {
+  position: fixed;
+  top: 0;
+  right: 0;
+  display: flex;
+  flex-direction: column;
+  width: 220px;
+  height: 100vh;
+  padding: 20px;
+  padding-top: 136px;
+  background-color: var(--secondary-bg-color);
+  z-index: 200;
+
+  transform: translateX(100%);
+  transition: var(--transition-dur-and-func);
+}
+.modal-mobile-menu.is-hidden-burger {
+  transform: translateX(0);
+}
+/* close button */
+.close-button-mobile {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  width: 28px;
+  max-height: 28px;
+  padding: 0;
+  border: none;
+  stroke: var(--main-light-text-color);
+  background-color: var(--secondary-bg-color);
+}
+.close-button-mobile:hover,
+.close-button-mobile:focus {
+  stroke: var(--accent-text-color);
+  transform: scale(1.3);
+  transition: var(--transition-dur-and-func);
+}
+.mobile-icon-close {
+  width: 28px;
+  height: 28px;
+}
+.mobile-icon-close:hover,
+.mobile-icon-close:focus {
+  outline: none;
+}
+/* navigation list */
+.modal-mobile-list {
+  display: flex;
+  flex-direction: column;
+  row-gap: 24px;
+  margin-left: 30px;
+  margin-bottom: auto;
+}
+.mobile-menu-link {
+  position: relative;
+  letter-spacing: -0.02em;
+}
+.mobile-menu-line:hover:after,
+.mobile-menu-line:focus:after {
+  position: absolute;
+  background-color: var(--accent-text-color);
+  content: '';
+  display: block;
+  border: 1px solid #fd9222;
+  transition: var(--transition-dur-and-func);
+  bottom: -8px;
+  left: 0;
+  width: 50%;
+}
+.mobile-menu-link:focus,
+.mobile-menu-link:hover {
+  color: var(--accent-text-color);
+  font-weight: 600;
+  transition: var(--transition-dur-and-func);
+}
+.mobile-menu-icon-list {
+  display: flex;
+  column-gap: 18px;
+}
+.mobile-menu-icon-svg {
+  width: 22px;
+  max-height: 22px;
+  stroke: var(--main-light-text-color);
+  fill: transparent;
+}
+.mobile-menu-icon-messeg:hover .mobile-menu-icon-svg,
+.mobile-menu-icon-messeg:focus .mobile-menu-icon-svg {
+  stroke: var(--accent-text-color);
+  transition: var(--transition-dur-and-func);
+  outline: none;
+}
+/* tablet */
+@media only screen and (min-width: 768px) {
+  .modal-mobile-menu {
+    width: 290px;
+    padding: 24px 32px;
+    padding-top: 156px;
+  }
+  .modal-mobile-list {
+    margin-left: 53px;
+  }
+}
+/* desktop */
+@media only screen and (min-width: 1200px) {
+  .modal-mobile-menu {
+    display: none;
+  }
+}

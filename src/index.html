@@ -1,24 +1,56 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Vanilla App Template</title>
-    <link rel="stylesheet" href="./css/styles.css" />
-  </head>
-  <body>
-    <load ="partials/header.html" />
 
-    <section>
-      <h1>Example page title</h1>
-      <!-- Path to images as from index.html file -->
-      <img src="./img/javascript.svg" alt="" />
-    </section>
+<head>
+  <meta charset="UTF-8">
+  <link rel="icon" type="image/svg+xml" href="/favicon.svg">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Chocolate-team-project</title>
 
-    <!-- Loads the specified .html file -->
-    <load ="partials/vite-promo.html" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/modern-normalize/1.1.0/modern-normalize.min.css">
+  <!-- video player -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/plyr@3.7.8/dist/plyr.min.css">
+  <!-- slider -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css">
+  <link rel="stylesheet" href="./css/styles.css">
+</head>
 
-    <script type="module" src="./main.js"></script>
-  </body>
+<body>
+
+  <header id="header">
+    <load src="partials/header.html" />
+    <load src="partials/burger-menu.html" />
+  </header>
+
+  <main>
+    <load src="partials/hero.html" />
+    <load src="partials/advantages.html" />
+    <load src="partials/components.html" />
+    <load src="partials/made.html" />
+    <load src="partials/products.html" />
+    <load src="partials/sellers.html" />
+    <load src="partials/reviews.html" />
+    <load src="partials/subscribe.html" />
+  </main>
+
+  <footer>
+    <load src="partials/footer.html" />
+  </footer>
+
+  <load src="partials/buy-now.html" />
+  <load src="partials/leave-review.html" />
+  <load src="partials/explore-chocolate.html" />
+
+  <!-- smooth scrolling (gotop)-->
+  <script src="https://code.jquery.com/jquery-3.4.1.min.js"
+    integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
+
+  <!-- slider -->
+  <script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"></script>
+
+  <!-- video player -->
+  <script src="https://cdn.jsdelivr.net/npm/plyr@3.7.8/dist/plyr.min.js"></script>
+  <script type="module" src="/main.js"></script>
+</body>
+
 </html>
